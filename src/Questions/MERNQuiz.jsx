@@ -276,21 +276,25 @@ function MERNQuiz() {
     });
   };
 
+  
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center py-8">
-      <h1 className="text-3xl font-bold mb-4">AI Quiz</h1>
+    <div className="min-h-screen flex flex-col items-center py-8 bg-white dark:bg-gray-900">
+      <div className="flex justify-between w-full max-w-4xl px-6">
+        <h1 className="text-3xl font-bold text-gray-800 dark:text-white">MERN Quiz</h1>
+        {/* <Theme />  */}
+      </div>
       <div className="text-red-500 text-xl font-bold mb-4">
         Time Left: {formatTime(timeLeft)}
       </div>
-      <div className="w-full max-w-4xl bg-white shadow-lg rounded-lg p-6">
+      <div className="w-full max-w-4xl bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6">
         {questions.map((q, index) => (
           <div key={q.id} className="mb-6">
-            <p className="text-lg font-medium">
+            <p className="text-lg font-medium text-gray-800 dark:text-white">
               {index + 1}. {q.question}
             </p>
             <div className="pl-6">
               {q.options.map((option) => (
-                <label key={option} className="block">
+                <label key={option} className="block text-gray-700 dark:text-gray-300">
                   <input
                     type="checkbox"
                     checked={selectedAnswers[q.id]?.includes(option) || false}
@@ -313,5 +317,6 @@ function MERNQuiz() {
     </div>
   );
 }
+
 
 export default MERNQuiz;
