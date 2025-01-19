@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -11,26 +12,23 @@ export default function Header() {
             alt="Team Logo"
             className="w-12 h-12"
           />
-          <h1 className="text-lg font-bold flex justify-center pl-10">PCTE Placement Quiz </h1>
+          <h1 className="text-lg font-bold flex justify-center pl-10">PCTE Placement Quiz</h1>
         </div>
 
         {/* Navigation Links */}
         <ul className="flex space-x-6">
-          <li>
-           
-          </li>
           <li>
             <a href="#about" className="hover:text-blue-500">
               About
             </a>
           </li>
           <li>
-            <a href="#contact" className="hover:text-blue-500">
+            <Link to="/contact" className="hover:text-blue-500">
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
     </header>
   );
-}  
+}
