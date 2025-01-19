@@ -16,15 +16,15 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-lg">
-        <h1 className="text-2xl font-bold text-gray-800 mb-6 text-center">
+    <div className="flex justify-center items-center min-h-screen bg-gray-100 dark:bg-gray-800">
+      <div className="bg-white dark:bg-gray-700 shadow-lg rounded-lg p-8 w-full max-w-lg">
+        <h1 className="text-2xl font-bold text-gray-800 dark:text-white mb-6 text-center">
           Contact Us
         </h1>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
           {/* Name Field */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
               Name
             </label>
             <input
@@ -33,7 +33,7 @@ const ContactForm = () => {
               placeholder="Your Name"
               className={`w-full p-3 border ${
                 errors.name ? "border-red-500" : "border-gray-300"
-              } rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500`}
+              } rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-600 dark:text-white`}
             />
             {errors.name && (
               <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
@@ -42,7 +42,7 @@ const ContactForm = () => {
 
           {/* Email Field */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
               Email
             </label>
             <input
@@ -57,7 +57,7 @@ const ContactForm = () => {
               placeholder="Your Email"
               className={`w-full p-3 border ${
                 errors.email ? "border-red-500" : "border-gray-300"
-              } rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500`}
+              } rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-600 dark:text-white`}
             />
             {errors.email && (
               <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
@@ -66,7 +66,7 @@ const ContactForm = () => {
 
           {/* Subject Field */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
               Subject
             </label>
             <input
@@ -75,7 +75,7 @@ const ContactForm = () => {
               placeholder="Subject"
               className={`w-full p-3 border ${
                 errors.subject ? "border-red-500" : "border-gray-300"
-              } rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500`}
+              } rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-600 dark:text-white`}
             />
             {errors.subject && (
               <p className="text-red-500 text-sm mt-1">
@@ -86,7 +86,7 @@ const ContactForm = () => {
 
           {/* Message Field */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
               Message
             </label>
             <textarea
@@ -101,7 +101,7 @@ const ContactForm = () => {
               rows="5"
               className={`w-full p-3 border ${
                 errors.message ? "border-red-500" : "border-gray-300"
-              } rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500`}
+              } rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-600 dark:text-white`}
             ></textarea>
             {errors.message && (
               <p className="text-red-500 text-sm mt-1">
@@ -113,7 +113,7 @@ const ContactForm = () => {
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white py-3 rounded-lg font-semibold hover:bg-blue-600 transition"
+            className="w-full bg-blue-500 text-white py-3 rounded-lg font-semibold hover:bg-blue-600 transition dark:bg-blue-700 dark:hover:bg-blue-600"
           >
             Send Message
           </button>

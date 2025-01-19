@@ -1,7 +1,7 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Header from "./Header/Header";
-import Categories from "./Card/Categories"
+import Categories from "./Card/Categories";
 import AiQuiz from "./Questions/AiQuiz";
 import CyberQuiz from "./Questions/CyberQuiz";
 import WebQuiz from "./Questions/WebQuiz";
@@ -10,20 +10,20 @@ import DSAQuiz from "./Questions/DSAQuiz";
 import UIQuiz from "./Questions/UIQuiz";
 import MADQuiz from "./Questions/MADQuiz";
 import MERNQuiz from "./Questions/MERNQuiz";
-import Contact from "./Contact/Contact"
-// Layout for shared components
+import Contact from "./Contact/Contact";
+
 const Layout = () => (
-  <>
+  <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-black dark:text-white">
     <Header />
     <div className="content-container">
       <Outlet /> {/* Routed components will render here */}
     </div>
-  </>
+  </div>
 );
 
 const router = createBrowserRouter([
   {
-    path: "/", // Base layout with shared Header
+    path: "/",
     element: <Layout />,
     children: [
       { path: "/", element: <Categories /> },
